@@ -3,35 +3,35 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://eager-meninsky-d6a40e.netlify.com/</loc>
     <lastmod>2020-01-02T01:11:53+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/posts/2019-03-07-first-post/</loc>
+    <loc>https://eager-meninsky-d6a40e.netlify.com/posts/2019-03-07-first-post/</loc>
     <lastmod>2020-01-02T01:11:53+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/</loc>
+    <loc>https://eager-meninsky-d6a40e.netlify.com/posts/</loc>
     <lastmod>2020-01-02T01:11:53+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/page/about/</loc>
+    <loc>https://eager-meninsky-d6a40e.netlify.com/page/about/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://eager-meninsky-d6a40e.netlify.com/categories/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/page/</loc>
+    <loc>https://eager-meninsky-d6a40e.netlify.com/page/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://eager-meninsky-d6a40e.netlify.com/tags/</loc>
   </url>
   
 </urlset>

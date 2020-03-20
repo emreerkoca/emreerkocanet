@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Some Things</title>
-    <link>http://example.org/posts/</link>
+    <link>https://eager-meninsky-d6a40e.netlify.com/posts/</link>
     <description>Recent content in Posts on Some Things</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 02 Jan 2020 01:11:53 +0300</lastBuildDate>
     
-	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://eager-meninsky-d6a40e.netlify.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>First Post</title>
-      <link>http://example.org/posts/2019-03-07-first-post/</link>
+      <link>https://eager-meninsky-d6a40e.netlify.com/posts/2019-03-07-first-post/</link>
       <pubDate>Thu, 02 Jan 2020 01:11:53 +0300</pubDate>
       
-      <guid>http://example.org/posts/2019-03-07-first-post/</guid>
+      <guid>https://eager-meninsky-d6a40e.netlify.com/posts/2019-03-07-first-post/</guid>
       <description>Sample Post</description>
     </item>
     
