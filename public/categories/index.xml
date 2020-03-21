@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on EmreErkocaBlog</title>
-    <link>https://www.emreerkoca.net/categories/</link>
-    <description>Recent content in Categories on EmreErkocaBlog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://www.emreerkoca.net/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-  </channel>
+	<channel>
+		<title>Categories on Learning New Things</title>
+		<link>https://www.emreerkoca.net/categories/</link>
+		<description>Recent content in Categories on Learning New Things</description>
+		<generator>Hugo -- gohugo.io</generator>
+		
+  		<language>en-us</language>
+		
+		<managingEditor>Page(/categories) (hugo author)</managingEditor>
+    	
+		<atom:link href="/categories/" rel="self" type="application/rss+xml" />
+		
+	</channel>
 </rss>

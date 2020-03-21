@@ -1,4 +1,46 @@
-baseURL = "https://www.emreerkoca.net/"
+baseURL = "https://www.emreerkoca.net/" 
 languageCode = "en-us"
-title = "EmreErkocaBlog"
-theme = "beautifulhugo"
+author = "Emre Erkoca"
+title = "Learning New Things"
+theme = "harbor"
+paginate = 3
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+
+[Author]
+  name = "hugo author"
+
+[outputs]
+    section = ["JSON", "HTML"]
+
+[[params.nav]]
+  identifier = "about"
+  name = "About"
+  icon = "fas fa-user fa-lg"
+  url = "/about/"
+  weight = 3
+
+[[params.nav]]
+  identifier = "tags"
+  name = "Tags"
+  icon = "fas fa-tag fa-lg"
+  url = "tags"
+  weight = 3
+
+[[params.nav]]
+  identifier = "search"
+  name = "Search"
+  icon = "fas fa-search fa-lg"
+  url = "search"
+  weight = 3
+
+[params]
+  mainSections = ["post"]
+  favicon = "favicon.ico"
+
+  [params.logo]
+    url = "icon.png"
+    width = 50
+    height = 50
+    alt = "Logo"

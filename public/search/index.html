@@ -57,9 +57,9 @@
 
     <div class="intro-header">
       <div class="container">
-        <div class="tags-heading">
+        <div class="page-heading">
           
-            <h1>Tags</h1>
+            <h1>Search</h1>
           
           
         </div>
@@ -69,13 +69,29 @@
 
 
     
+  <div class="container" role="main">
+    <article class="article" class="blog-post">
+      
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/js/jquery.mark.es6.min.js"></script>
+<script src="/js/lunr.js"></script>
+<script src="/js/lunr.stemmer.support.js"></script>
+<script src="/js/tinyseg.js"></script>
+<script src="/js/lunr.ja.js"></script>
+<script src="/js/lunr.multi.js"></script>
+<script src="/js/search.js"></script>
 
-<div class="container" role="main">
-  <article class="post-preview">
-    
-  </article>
+<div class="searchBoxContainer">
+    <input type="text" id="searchBox" class="searchBox" placeholder="Search..." />
 </div>
+<div id="searchResults" class="searchResults"></div>
 
+
+
+      
+    </article>
+    
+  </div>
 
      
 
