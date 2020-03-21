@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Some Things</title>
-    <link>https://eager-meninsky-d6a40e.netlify.com/posts/</link>
-    <description>Recent content in Posts on Some Things</description>
+    <title>Posts on EmreErkocaBlog</title>
+    <link>https://www.emreerkoca.net/posts/</link>
+    <description>Recent content in Posts on EmreErkocaBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 02 Jan 2020 01:11:53 +0300</lastBuildDate>
     
-	<atom:link href="https://eager-meninsky-d6a40e.netlify.com/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.emreerkoca.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>First Post</title>
-      <link>https://eager-meninsky-d6a40e.netlify.com/posts/2019-03-07-first-post/</link>
+      <link>https://www.emreerkoca.net/posts/2019-03-07-first-post/</link>
       <pubDate>Thu, 02 Jan 2020 01:11:53 +0300</pubDate>
       
-      <guid>https://eager-meninsky-d6a40e.netlify.com/posts/2019-03-07-first-post/</guid>
+      <guid>https://www.emreerkoca.net/posts/2019-03-07-first-post/</guid>
       <description>Sample Post</description>
     </item>
     

@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pages on Some Things</title>
-    <link>https://eager-meninsky-d6a40e.netlify.com/page/</link>
-    <description>Recent content in Pages on Some Things</description>
+    <title>Pages on EmreErkocaBlog</title>
+    <link>https://www.emreerkoca.net/page/</link>
+    <description>Recent content in Pages on EmreErkocaBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://eager-meninsky-d6a40e.netlify.com/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.emreerkoca.net/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About me</title>
-      <link>https://eager-meninsky-d6a40e.netlify.com/page/about/</link>
+      <link>https://www.emreerkoca.net/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://eager-meninsky-d6a40e.netlify.com/page/about/</guid>
-      <description>My name is Inigo Montoya. I have the following qualities:
- I rock a great mustache I&#39;m extremely loyal to my family  What else do you need?
-my history To be honest, I&#39;m having some trouble remembering right now, so why don&#39;t you just watch my movie and it will answer all your questions.</description>
+      <guid>https://www.emreerkoca.net/page/about/</guid>
+      <description></description>
     </item>
     
   </channel>

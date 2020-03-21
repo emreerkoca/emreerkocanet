@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Some Things</title>
-    <link>https://eager-meninsky-d6a40e.netlify.com/</link>
-    <description>Recent content on Some Things</description>
+    <title>EmreErkocaBlog</title>
+    <link>https://www.emreerkoca.net/</link>
+    <description>Recent content on EmreErkocaBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 02 Jan 2020 01:11:53 +0300</lastBuildDate>
     
-	<atom:link href="https://eager-meninsky-d6a40e.netlify.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.emreerkoca.net/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>First Post</title>
-      <link>https://eager-meninsky-d6a40e.netlify.com/posts/2019-03-07-first-post/</link>
+      <link>https://www.emreerkoca.net/posts/2019-03-07-first-post/</link>
       <pubDate>Thu, 02 Jan 2020 01:11:53 +0300</pubDate>
       
-      <guid>https://eager-meninsky-d6a40e.netlify.com/posts/2019-03-07-first-post/</guid>
+      <guid>https://www.emreerkoca.net/posts/2019-03-07-first-post/</guid>
       <description>Sample Post</description>
     </item>
     
     <item>
       <title>About me</title>
-      <link>https://eager-meninsky-d6a40e.netlify.com/page/about/</link>
+      <link>https://www.emreerkoca.net/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://eager-meninsky-d6a40e.netlify.com/page/about/</guid>
-      <description>My name is Inigo Montoya. I have the following qualities:
- I rock a great mustache I&#39;m extremely loyal to my family  What else do you need?
-my history To be honest, I&#39;m having some trouble remembering right now, so why don&#39;t you just watch my movie and it will answer all your questions.</description>
+      <guid>https://www.emreerkoca.net/page/about/</guid>
+      <description></description>
     </item>
     
   </channel>
