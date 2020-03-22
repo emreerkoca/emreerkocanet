@@ -4,3 +4,6 @@
 [submodule "themes/harbor"]
 	path = themes/harbor
 	url = https://github.com/matsuyoshi30/harbor.git
+[submodule "themes/--force"]
+	path = themes/--force
+	url = https://github.com/emreerkoca/harbor.git
