@@ -1,17 +1,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Categories on Learning New Things</title>
-		<link>https://www.emreerkoca.net/categories/</link>
-		<description>Recent content in Categories on Learning New Things</description>
+		<title>javascript on Learning New Things</title>
+		<link>https://www.emreerkoca.net/tags/javascript/</link>
+		<description>Recent content in javascript on Learning New Things</description>
 		<generator>Hugo -- gohugo.io</generator>
 		
   		<language>en-us</language>
 		
-		<managingEditor>Page(/categories) (hugo author)</managingEditor>
+		<managingEditor>Page(/tags/javascript) (hugo author)</managingEditor>
     	
   		<lastBuildDate>Fri, 19 Apr 2019 00:00:00 +0000</lastBuildDate>
 		
-		<atom:link href="https://www.emreerkoca.net/categories/" rel="self" type="application/rss+xml" />
+		<atom:link href="https://www.emreerkoca.net/tags/javascript/" rel="self" type="application/rss+xml" />
 		
 		<item>
 			<title>Calculating User&#39;s Session Count</title>

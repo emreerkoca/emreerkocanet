@@ -4,7 +4,47 @@
   
   <url>
     <loc>https://www.emreerkoca.net/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.emreerkoca.net/post/calculatesessioncount/</loc>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.emreerkoca.net/categories/</loc>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.emreerkoca.net/categories/javascript/</loc>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.emreerkoca.net/tags/javascript/</loc>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.emreerkoca.net/post/</loc>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.emreerkoca.net/categories/sample-functions/</loc>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.emreerkoca.net/tags/session/</loc>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.emreerkoca.net/tags/</loc>
+    <lastmod>2019-04-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -13,19 +53,7 @@
   </url>
   
   <url>
-    <loc>https://www.emreerkoca.net/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.emreerkoca.net/post/</loc>
-  </url>
-  
-  <url>
     <loc>https://www.emreerkoca.net/search/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.emreerkoca.net/tags/</loc>
   </url>
   
 </urlset>

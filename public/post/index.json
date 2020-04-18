@@ -1,3 +1,13 @@
 [
     
+        
+            {
+                "ref": "https://www.emreerkoca.net/post/calculatesessioncount/",
+                "title": "Calculating User's Session Count",
+                "section": "post",
+                "date" : "2019.04.19",
+                "body": "I wanted to calculate the user's session count through session storage and local storage.\n Get the last session value from local storage.   If there is no stored value create new storage items. Session storage prevents increase value in the same session. If the last session value is not null, the user was closed browser and opened it again. Increase the last storage value and save the last values.   Finally it returns session count.  var updateStorages = (storageValue) =\u0026gt; {\rlocalStorage.setItem(\u0026#39;last-session-value\u0026#39;, storageValue);\rsessionStorage.setItem(\u0026#39;current-session\u0026#39;, storageValue);\r};\rvar getSessionCount = () =\u0026gt; {\rvar lastSessionValue = localStorage.getItem(\u0026#39;last-session-value\u0026#39;);\rif (lastSessionValue === null) {\rupdateStorages(1);\r} else if (lastSessionValue \u0026amp;\u0026amp; sessionStorage.getItem(\u0026#39;current-session\u0026#39;) === null) {\rlastSessionValue++;\rupdateStorages(lastSessionValue);\r}\rreturn parseInt(lastSessionValue);\r};\rgetSessionCount();  It's my first technical post. It's just basic solution and I wanted to share it. I would like write more complicated things too. Cheers.\n"
+            }
+        
+    
 ]

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+<title>Calculating User&#39;s Session Count</title>
+
+
+  
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="alternate" type="application/rss+xml" href="https://www.emreerkoca.net/index.xml" title="Site Title">
+
+<link rel="stylesheet" href="https://www.emreerkoca.net/css/main.css" />
+<link rel="stylesheet" href="https://www.emreerkoca.net/css/syntax.css" />
+<link disabled id="dark-mode-theme" rel="stylesheet" href="https://www.emreerkoca.net/css/dark.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous" />
+<meta name="generator" content="Hugo 0.62.1" />
+  </head>
+  <body>
+    
+  
+
+
+
+
+  <header>
+    <nav class="navbar">
+  <div class="nav">
+    
+      <a href="https://www.emreerkoca.net/" class="nav-logo">
+      <img src="https://www.emreerkoca.net/images/icon.png"
+           width="50"
+           height="50"
+           alt="Logo">
+      </a>
+    
+
+    <ul class="nav-links">
+      
+        
+          <li><a href="/about/" name="About"><i class="fas fa-user fa-lg"></i></a></li>
+        
+      
+        
+          <li><a href="/tags" name="Tags"><i class="fas fa-tag fa-lg"></i></a></li>
+        
+      
+        
+          <li><a href="/search" name="Search"><i class="fas fa-search fa-lg"></i></a></li>
+        
+      
+    </ul>
+  </div>
+</nav>
+
+    <div class="intro-header">
+      <div class="container">
+        <div class="post-heading">
+          
+            <h1>Calculating User&#39;s Session Count</h1>
+          
+          
+            <span class="meta-post">
+  <i class="fa fa-calendar-alt"></i>&nbsp;Apr 19, 2019
+  
+    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    
+      <a href="https://www.emreerkoca.net//categories/javascript/">JavaScript</a>&nbsp;
+    
+      <a href="https://www.emreerkoca.net//categories/sample-functions/">Sample Functions</a>&nbsp;
+    
+  
+</span>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+  <div class="container" role="main">
+    <article class="article" class="blog-post">
+      
+    <p>I wanted to calculate the user's session count through session storage and local storage.</p>
+<ol>
+<li>Get the last session value from local storage.</li>
+<li>
+<ul>
+<li>If there is no stored value create new storage items. Session storage prevents increase value in the same session.</li>
+<li>If the last session value is not null, the user was closed browser and opened it again. Increase the last storage value and save the last values.</li>
+</ul>
+</li>
+<li>Finally it returns session count.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">updateStorages</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">storageValue</span>) =&gt; {
+    <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#39;last-session-value&#39;</span>, <span style="color:#a6e22e">storageValue</span>);
+    <span style="color:#a6e22e">sessionStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#39;current-session&#39;</span>, <span style="color:#a6e22e">storageValue</span>);
+};
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">getSessionCount</span> <span style="color:#f92672">=</span> () =&gt; {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">lastSessionValue</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#39;last-session-value&#39;</span>);
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">lastSessionValue</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">null</span>) {
+        <span style="color:#a6e22e">updateStorages</span>(<span style="color:#ae81ff">1</span>);
+    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">lastSessionValue</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">sessionStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#39;current-session&#39;</span>) <span style="color:#f92672">===</span> <span style="color:#66d9ef">null</span>) {
+        <span style="color:#a6e22e">lastSessionValue</span><span style="color:#f92672">++</span>;
+
+        <span style="color:#a6e22e">updateStorages</span>(<span style="color:#a6e22e">lastSessionValue</span>);
+    }
+
+    <span style="color:#66d9ef">return</span> parseInt(<span style="color:#a6e22e">lastSessionValue</span>);
+};
+
+
+<span style="color:#a6e22e">getSessionCount</span>();
+</code></pre></div>
+<p>It's my first technical post. It's just basic solution and I wanted to share it. I would like write more complicated things too. Cheers.</p>
+
+
+      
+        <div class="blog-tags">
+          
+            <a href="https://www.emreerkoca.net//tags/session/">session</a>&nbsp;
+          
+            <a href="https://www.emreerkoca.net//tags/javascript/">javascript</a>&nbsp;
+          
+        </div>
+      
+    </article>
+    
+  </div>
+
+    
+
+  </body>
+  <script>
+  var toggle = document.getElementById("dark-mode-toggle");
+  var darkTheme = document.getElementById("dark-mode-theme");
+
+  
+  var savedTheme = localStorage.getItem("dark-mode-storage") || "light";
+  setTheme(savedTheme);
+
+  toggle.addEventListener("click", () => {
+    if (toggle.className === "fas fa-moon") {
+        setTheme("dark");
+    } else if (toggle.className === "fas fa-sun") {
+        setTheme("light");
+    }
+  });
+
+  function setTheme(mode) {
+    localStorage.setItem("dark-mode-storage", mode);
+
+    if (mode === "dark") {
+        darkTheme.disabled = false;
+        toggle.className = "fas fa-sun";
+    } else if (mode === "light") {
+        darkTheme.disabled = true;
+        toggle.className = "fas fa-moon";
+    }
+  }
+</script>
+
+</html>
