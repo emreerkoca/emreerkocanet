@@ -1,7 +1,7 @@
 +++
 author = "Emre Erkoca"
 title = "Calculating User's Session Count"
-date = "2019-04-19"
+date = "2020-04-19"
 description = "Basic function for calculating user's sesion count"
 tags = [
     "session",

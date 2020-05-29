@@ -9,14 +9,22 @@
 		
 		<managingEditor>Page(/categories/javascript) (hugo author)</managingEditor>
     	
-  		<lastBuildDate>Fri, 19 Apr 2019 00:00:00 +0000</lastBuildDate>
+  		<lastBuildDate>Fri, 29 May 2020 00:00:00 +0000</lastBuildDate>
 		
 		<atom:link href="https://www.emreerkoca.net/categories/javascript/" rel="self" type="application/rss+xml" />
 		
 		<item>
+			<title>MutationObserver and Event Usage</title>
+			<link>https://www.emreerkoca.net/post/mutationobserverandevent/</link>
+			<pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
+			<guid>https://www.emreerkoca.net/post/mutationobserverandevent/</guid>
+			<description>&lt;p&gt;I wanted to share a simple example of MutationObserver and Event.&lt;/p&gt;</description>
+		</item>
+		
+		<item>
 			<title>Calculating User&#39;s Session Count</title>
 			<link>https://www.emreerkoca.net/post/calculatesessioncount/</link>
-			<pubDate>Fri, 19 Apr 2019 00:00:00 +0000</pubDate>
+			<pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
 			<guid>https://www.emreerkoca.net/post/calculatesessioncount/</guid>
 			<description>&lt;p&gt;I wanted to calculate the user&#39;s session count through session storage and local storage.&lt;/p&gt;</description>
 		</item>

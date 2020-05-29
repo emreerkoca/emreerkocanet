@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+<title>MutationObserver and Event Usage</title>
+
+
+  
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="alternate" type="application/rss+xml" href="https://www.emreerkoca.net/index.xml" title="Site Title">
+
+<link rel="stylesheet" href="https://www.emreerkoca.net/css/main.css" />
+<link rel="stylesheet" href="https://www.emreerkoca.net/css/syntax.css" />
+<link disabled id="dark-mode-theme" rel="stylesheet" href="https://www.emreerkoca.net/css/dark.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous" />
+<meta name="generator" content="Hugo 0.62.1" />
+  </head>
+  <body>
+    
+  
+
+
+
+
+  <header>
+    <nav class="navbar">
+  <div class="nav">
+    
+      <a href="https://www.emreerkoca.net/" class="nav-logo">
+      <img src="https://www.emreerkoca.net/images/icon.png"
+           width="50"
+           height="50"
+           alt="Logo">
+      </a>
+    
+
+    <ul class="nav-links">
+      
+        
+          <li><a href="/about/" name="About"><i class="fas fa-user fa-lg"></i></a></li>
+        
+      
+        
+          <li><a href="/tags" name="Tags"><i class="fas fa-tag fa-lg"></i></a></li>
+        
+      
+        
+          <li><a href="/search" name="Search"><i class="fas fa-search fa-lg"></i></a></li>
+        
+      
+    </ul>
+  </div>
+</nav>
+
+    <div class="intro-header">
+      <div class="container">
+        <div class="post-heading">
+          
+            <h1>MutationObserver and Event Usage</h1>
+          
+          
+            <span class="meta-post">
+  <i class="fa fa-calendar-alt"></i>&nbsp;May 29, 2020
+  
+    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    
+      <a href="https://www.emreerkoca.net//categories/javascript/">JavaScript</a>&nbsp;
+    
+      <a href="https://www.emreerkoca.net//categories/web-apis/">Web APIs</a>&nbsp;
+    
+  
+</span>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+  <div class="container" role="main">
+    <article class="article" class="blog-post">
+      
+    <p>I wanted to share a simple example of MutationObserver and Event.</p>
+<p>I want to explain it through an example. Say you have your own company and you're working with e-commerce companies. Your customer says to you &ldquo;Can you provide user's last added product for another consultant company. We need this information&rdquo; and you said &ldquo;Yes, we can do this&rdquo;</p>
+<p>Of course, you can find a professional solution to this problem. I'll make this with MutationObserver and Event. MutationObserver is using detect DOM changes. For example, you have an element. You can detect any changes in this element. Adding a new child element, changing element content, adding new attribute, etc. I used it for my card page element. It's imitating a basic cart page. I'll add a child div to here as a product.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        &lt;<span style="color:#f92672">title</span>&gt;MutationObserve and Event Usage&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cart-modal&#34;</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;product&#34;</span> <span style="color:#a6e22e">data-product-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;424242&#34;</span>&gt;Product 1&lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;product&#34;</span> <span style="color:#a6e22e">data-product-id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;213113&#34;</span>&gt;Product 2&lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>I added a new child element in this code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">product</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;div&#34;</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">node</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createTextNode</span>(<span style="color:#e6db74">&#34;Product 3&#34;</span>);
+
+    <span style="color:#a6e22e">product</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">node</span>);
+    <span style="color:#a6e22e">product</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#39;product&#39;</span>);
+    <span style="color:#a6e22e">product</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;data-product-id&#39;</span>, <span style="color:#e6db74">&#39;232323&#39;</span>);
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">element</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;.cart-modal&#34;</span>);
+
+    <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">product</span>);
+}, <span style="color:#ae81ff">4000</span>);
+</code></pre></div>
+<p>I used setTimeout for wait 4000 milliseconds. Because we want to detect DOM changes. It'll trigger after 4000 milliseconds. You can review MutationObserver sample codes from here:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//Your target element
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">targetNode</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;.cart-modal&#39;</span>);
+
+<span style="color:#75715e">//config defined for change types. I&#39;m just listening child element additions
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">config</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">childList</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+
+<span style="color:#75715e">//You&#39;ll understand this from name. MutationList so list of detected mutations
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">callback</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutationsList</span>, <span style="color:#a6e22e">observer</span>) {
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">mutation</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">mutationsList</span>) { 
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">mutation</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;childList&#39;</span>) {
+            <span style="color:#75715e">//if mutation type is childList, any child element has been added or any child element has been modified
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">//I created a new event and I triggered it. I explained it below
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">createAndTriggerEvent</span>({
+                <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">mutation</span>.<span style="color:#a6e22e">addedNodes</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">attributes</span>[<span style="color:#e6db74">&#39;data-product-id&#39;</span>].<span style="color:#a6e22e">nodeValue</span>,
+                <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">mutation</span>.<span style="color:#a6e22e">addedNodes</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">innerText</span>
+            });
+        }
+    }
+};
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">observer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MutationObserver</span>(<span style="color:#a6e22e">callback</span>);
+
+<span style="color:#75715e">// Start observing the target node for configured mutations
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">observer</span>.<span style="color:#a6e22e">observe</span>(<span style="color:#a6e22e">targetNode</span>, <span style="color:#a6e22e">config</span>);
+
+<span style="color:#75715e">// Later, you can stop observing.
+</span><span style="color:#75715e"></span><span style="color:#75715e">//observer.disconnect();
+</span></code></pre></div>
+<p>I wrote createAndTriggerEvent function for creating a new Event and triggering it. When our data is ready we're triggering it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">createAndTriggerEvent</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">productInfo</span>) =&gt; {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">event</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Event</span>(<span style="color:#e6db74">&#39;listenLastAddedProduct&#39;</span>);
+
+    window.<span style="color:#a6e22e">lastAddedProduct</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">productInfo</span>;
+
+    document.<span style="color:#a6e22e">dispatchEvent</span>(<span style="color:#a6e22e">event</span>);
+}
+</code></pre></div>
+<p>Finally, I'm listening to our custom event. When it's triggering we're catching data.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;listenLastAddedProduct&#39;</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">e</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(window.<span style="color:#a6e22e">lastAddedProduct</span>);
+}, <span style="color:#66d9ef">false</span>);
+</code></pre></div>
+<p>You can get all JavaScript codes from here:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"> <span style="color:#a6e22e">createAndTriggerEvent</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">productInfo</span>) =&gt; {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">event</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Event</span>(<span style="color:#e6db74">&#39;listenLastAddedProduct&#39;</span>);
+
+    window.<span style="color:#a6e22e">lastAddedProduct</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">productInfo</span>;
+
+    document.<span style="color:#a6e22e">dispatchEvent</span>(<span style="color:#a6e22e">event</span>);
+}
+
+<span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">product</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;div&#34;</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">node</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createTextNode</span>(<span style="color:#e6db74">&#34;Product 3&#34;</span>);
+
+    <span style="color:#a6e22e">product</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">node</span>);
+    <span style="color:#a6e22e">product</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#39;product&#39;</span>);
+    <span style="color:#a6e22e">product</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;data-product-id&#39;</span>, <span style="color:#e6db74">&#39;232323&#39;</span>);
+
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">element</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;.cart-modal&#34;</span>);
+
+    <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">product</span>);
+}, <span style="color:#ae81ff">4000</span>);
+
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">targetNode</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;.cart-modal&#39;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">config</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">childList</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">callback</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">mutationsList</span>, <span style="color:#a6e22e">observer</span>) {
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">mutation</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">mutationsList</span>) { 
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">mutationsList</span>);
+
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">mutation</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;childList&#39;</span>) {
+            <span style="color:#a6e22e">createAndTriggerEvent</span>({
+                <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">mutation</span>.<span style="color:#a6e22e">addedNodes</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">attributes</span>[<span style="color:#e6db74">&#39;data-product-id&#39;</span>].<span style="color:#a6e22e">nodeValue</span>,
+                <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">mutation</span>.<span style="color:#a6e22e">addedNodes</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">innerText</span>
+            });
+        }
+    }
+};
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">observer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MutationObserver</span>(<span style="color:#a6e22e">callback</span>);
+
+<span style="color:#a6e22e">observer</span>.<span style="color:#a6e22e">observe</span>(<span style="color:#a6e22e">targetNode</span>, <span style="color:#a6e22e">config</span>);
+
+document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;listenLastAddedProduct&#39;</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">e</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(window.<span style="color:#a6e22e">lastAddedProduct</span>);
+}, <span style="color:#66d9ef">false</span>);
+
+<span style="color:#75715e">// Later, you can stop observing
+</span><span style="color:#75715e"></span><span style="color:#75715e">//observer.disconnect();
+</span></code></pre></div>
+
+
+      
+        <div class="blog-tags">
+          
+            <a href="https://www.emreerkoca.net//tags/javascript/">JavaScript</a>&nbsp;
+          
+            <a href="https://www.emreerkoca.net//tags/web-apis/">Web APIs</a>&nbsp;
+          
+            <a href="https://www.emreerkoca.net//tags/mutationobserver/">MutationObserver</a>&nbsp;
+          
+            <a href="https://www.emreerkoca.net//tags/event/">Event</a>&nbsp;
+          
+        </div>
+      
+    </article>
+    
+  </div>
+
+    
+
+  </body>
+  <script>
+  var toggle = document.getElementById("dark-mode-toggle");
+  var darkTheme = document.getElementById("dark-mode-theme");
+
+  
+  var savedTheme = localStorage.getItem("dark-mode-storage") || "light";
+  setTheme(savedTheme);
+
+  toggle.addEventListener("click", () => {
+    if (toggle.className === "fas fa-moon") {
+        setTheme("dark");
+    } else if (toggle.className === "fas fa-sun") {
+        setTheme("light");
+    }
+  });
+
+  function setTheme(mode) {
+    localStorage.setItem("dark-mode-storage", mode);
+
+    if (mode === "dark") {
+        darkTheme.disabled = false;
+        toggle.className = "fas fa-sun";
+    } else if (mode === "light") {
+        darkTheme.disabled = true;
+        toggle.className = "fas fa-moon";
+    }
+  }
+</script>
+
+</html>

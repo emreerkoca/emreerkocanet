@@ -1,17 +1,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>session on Learning New Things</title>
-		<link>https://www.emreerkoca.net/tags/session/</link>
-		<description>Recent content in session on Learning New Things</description>
+		<title>MutationObserver on Learning New Things</title>
+		<link>https://www.emreerkoca.net/tags/mutationobserver/</link>
+		<description>Recent content in MutationObserver on Learning New Things</description>
 		<generator>Hugo -- gohugo.io</generator>
 		
   		<language>en-us</language>
 		
-		<managingEditor>Page(/tags/session) (hugo author)</managingEditor>
+		<managingEditor>Page(/tags/mutationobserver) (hugo author)</managingEditor>
     	
-  		<lastBuildDate>Sun, 19 Apr 2020 00:00:00 +0000</lastBuildDate>
+  		<lastBuildDate>Fri, 29 May 2020 00:00:00 +0000</lastBuildDate>
 		
-		<atom:link href="https://www.emreerkoca.net/tags/session/" rel="self" type="application/rss+xml" />
+		<atom:link href="https://www.emreerkoca.net/tags/mutationobserver/" rel="self" type="application/rss+xml" />
 		
 		<item>
 			<title>MutationObserver and Event Usage</title>
