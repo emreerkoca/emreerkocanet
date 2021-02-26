@@ -1,7 +1,7 @@
 baseURL = "https://www.emreerkoca.net/" 
 languageCode = "en-us"
 author = "Emre Erkoca"
-title = "Learning New Things"
+title = "Public Notebook"
 theme = "harbor"
 paginate = 3
 DefaultContentLanguage = "en"
