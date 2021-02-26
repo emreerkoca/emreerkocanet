@@ -55,7 +55,7 @@ setTimeout(function() {
 }, 4000);
 {{< /highlight >}}
 
-I used setTimeout for wait 4000 milliseconds. Because we want to detect DOM changes. It'll trigger after 4000 milliseconds. You can review MutationObserver sample codes from here:
+I used setTimeout to wait for 4000 milliseconds. Because we want to detect DOM changes. It'll trigger after 4000 milliseconds. You can review MutationObserver sample codes from here:
 
 {{< highlight js >}}
 //Your target element

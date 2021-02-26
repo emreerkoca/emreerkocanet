@@ -1,0 +1,41 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>.NET Core on Learning New Things</title>
+		<link>https://www.emreerkoca.net/tags/.net-core/</link>
+		<description>Recent content in .NET Core on Learning New Things</description>
+		<generator>Hugo -- gohugo.io</generator>
+		
+  		<language>en-us</language>
+		
+		<managingEditor>Page(/tags/.net-core) (hugo author)</managingEditor>
+    	
+  		<lastBuildDate>Fri, 26 Feb 2021 00:00:00 +0000</lastBuildDate>
+		
+		<atom:link href="https://www.emreerkoca.net/tags/.net-core/" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Dotnet Core Localization</title>
+			<link>https://www.emreerkoca.net/post/dotnetcorelocalization/</link>
+			<pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
+			<guid>https://www.emreerkoca.net/post/dotnetcorelocalization/</guid>
+			<description>&lt;p&gt;I had to make a multi language application. Because there are a lot of languages and you might want to be global for more customers.&lt;/p&gt;</description>
+		</item>
+		
+		<item>
+			<title>MutationObserver and Event Usage</title>
+			<link>https://www.emreerkoca.net/post/mutationobserverandevent/</link>
+			<pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
+			<guid>https://www.emreerkoca.net/post/mutationobserverandevent/</guid>
+			<description>&lt;p&gt;I wanted to share a simple example of MutationObserver and Event.&lt;/p&gt;</description>
+		</item>
+		
+		<item>
+			<title>Calculating User&#39;s Session Count</title>
+			<link>https://www.emreerkoca.net/post/calculatesessioncount/</link>
+			<pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
+			<guid>https://www.emreerkoca.net/post/calculatesessioncount/</guid>
+			<description>&lt;p&gt;I wanted to calculate the user&#39;s session count through session storage and local storage.&lt;/p&gt;</description>
+		</item>
+		
+	</channel>
+</rss>
