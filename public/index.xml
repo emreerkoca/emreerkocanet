@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Learning New Things</title>
+		<title>Public Notebook</title>
 		<link>https://www.emreerkoca.net/</link>
-		<description>Recent content on Learning New Things</description>
+		<description>Recent content on Public Notebook</description>
 		<generator>Hugo -- gohugo.io</generator>
 		
   		<language>en-us</language>
